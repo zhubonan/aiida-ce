@@ -6,10 +6,10 @@ from aiida.engine.launch import run_get_node
 from aiida import orm
 from aiida.plugins import WorkflowFactory, DataFactory
 
-ClusterSpaceData = DataFactory('cluster_space')
-ClusterExpansionData = DataFactory('cluster_expansion')
-ConstructClusterExpansion = WorkflowFactory('construct_ce')
-IcetMcsqsWorkChain = WorkflowFactory('icet.mcsqs')
+ClusterSpaceData = DataFactory('ce.cluster_space')
+ClusterExpansionData = DataFactory('ce.cluster_expansion')
+ConstructClusterExpansion = WorkflowFactory('ce.construct_ce')
+IcetMcsqsWorkChain = WorkflowFactory('ce.icet.mcsqs')
 
 # ConstructClusterExpansion
 

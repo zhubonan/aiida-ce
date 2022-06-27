@@ -21,26 +21,26 @@
     "version": "0.1.0",
     "entry_points": {
         "aiida.data": [
-            "structure_db = aiida_ce.data.structure_db:StructureDbData",
-            "cluster_space = aiida_ce.data.cluster:ClusterSpaceData",
-            "cluster_expansion = aiida_ce.data.cluster:ClusterExpansionData"
+            "ce.structure_db = aiida_ce.data.structure_db:StructureDbData",
+            "ce.cluster_space = aiida_ce.data.cluster:ClusterSpaceData",
+            "ce.cluster_expansion = aiida_ce.data.cluster:ClusterExpansionData"
         ],
         "aiida.calculations": [
-            "atat.mcsqs = aiida_ce.calculations.mcsqs:AtatMcsqsCalculation"
+            "ce.atat.mcsqs = aiida_ce.calculations.mcsqs:AtatMcsqsCalculation"
         ],
         "aiida.parsers": [
-            "atat.mcsqs = aiida_ce.parsers.mcsqs:AtatMcsqsParser"
+            "ce.atat.mcsqs = aiida_ce.parsers.mcsqs:AtatMcsqsParser"
         ],
         "aiida.workflows": [
-            "construct_ce = aiida_ce.workflows.create_ce:ConstructClusterExpansion",
-            "icet.mcsqs = aiida_ce.workflows.sqs:IcetMcsqsWorkChain"
+            "ce.construct_ce = aiida_ce.workflows.create_ce:ConstructClusterExpansion",
+            "ce.icet.mcsqs = aiida_ce.workflows.sqs:IcetMcsqsWorkChain"
         ]
     },
     "include_package_data": true,
     "setup_requires": ["reentry"],
     "reentry_register": true,
     "install_requires": [
-        "aiida-core>=1.5.0,<2.0.0",
+        "aiida-core>=1.5.0,<3.0.0",
         "icet~=1.4",
         "ase~=3.21"
     ],

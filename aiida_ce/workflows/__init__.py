@@ -4,7 +4,7 @@ from aiida import orm
 from aiida.plugins import DataFactory
 from aiida.engine import WorkChain, calcfunction
 
-ClusterSpaceData = DataFactory('cluster_space')
+ClusterSpaceData = DataFactory('ce.cluster_space')
 
 
 @calcfunction

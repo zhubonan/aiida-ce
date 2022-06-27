@@ -5,7 +5,7 @@ from aiida import orm
 from aiida.engine import run_get_node
 from aiida.plugins import CalculationFactory
 
-McsqsCalculation = CalculationFactory('atat.mcsqs')
+McsqsCalculation = CalculationFactory('ce.atat.mcsqs')
 
 # def run():
 #     inputs = {

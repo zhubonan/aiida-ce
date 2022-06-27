@@ -7,7 +7,7 @@ from icet.tools.structure_generation import generate_sqs_from_supercells
 
 from . import _create_cluster_space
 
-ClusterSpaceData = DataFactory('cluster_space')
+ClusterSpaceData = DataFactory('ce.cluster_space')
 
 
 class IcetMcsqsWorkChain(WorkChain):

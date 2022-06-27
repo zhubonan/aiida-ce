@@ -7,9 +7,9 @@ from aiida.plugins import DataFactory
 
 from . import _create_cluster_space
 
-StructureDbData = DataFactory('structure_db')
-ClusterExpansionData = DataFactory('cluster_expansion')
-ClusterSpaceData = DataFactory('cluster_space')
+StructureDbData = DataFactory('ce.structure_db')
+ClusterExpansionData = DataFactory('ce.cluster_expansion')
+ClusterSpaceData = DataFactory('ce.cluster_space')
 
 
 class ConstructClusterExpansion(WorkChain):

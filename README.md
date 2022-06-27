@@ -15,17 +15,17 @@ Moreover, it can be used to complete a throught cluster expansion study on alloy
   * `StructureDBData` is to represent a collection of structures with their properties (mostly the energies, if given). Structures are stored as a ase database with sqllite in the aiida file repository. This data type is the input of the cluster expansion training if the properties of the structures are also stored. If the properties are not calculated, this data type is the input of a energy evaluation workflow which give a `StructureDBData` as output with all structures tagged with their evaluated energies.
 
   ```python
-  StructureDBData = DataFactory('structure_db')
+  StructureDBData = DataFactory('ce.structure_db')
   ```
 
   * `ClusterSpaceData` is a data type to represent the cluster information used in the cluster expansion process.
   ```python
-  ClusterSpaceData = DataFactory('cluster_space')
+  ClusterSpaceData = DataFactory('ce.cluster_space')
   ```
 
   * `ClusterExpansioneData` is a data type to represent the cluster expansion information. It can be used to predict the energy of specific configurations.
   ```python
-  ClusterExpansionData = DataFactory('cluster_expansion')
+  ClusterExpansionData = DataFactory('ce.cluster_expansion')
   ```
 
 ## Usage
@@ -42,8 +42,8 @@ from aiida.plugins import WorkflowFactory, DataFactory
 
 from ase.build import bulk
 
-ClusterExpansionData = DataFactory('cluster_expansion')
-IcetSqsWorkChain = WorkflowFactory('icet.sqs')
+ClusterExpansionData = DataFactory('ce.cluster_expansion')
+IcetSqsWorkChain = WorkflowFactory('ce.icet.sqs')
 
 cluster_space_data = ClusterSpaceData()
 cluster_space_data.set(ase=bulk('Au'),
@@ -71,7 +71,7 @@ Here is a example of generating SQS with ATAT's `mcsqs` engine:
 from aiida import orm
 from aiida.plugins import CalculationFactory
 
-McsqsCalculation = CalculationFactory('atat.mcsqs')
+McsqsCalculation = CalculationFactory('ce.atat.mcsqs')
 
 primitive_structure = orm.StructureData(cell=[[1.,0,0],[0.5,0.866,0,],[0.,0.,1.63333]])
 primitive_structure.append_atom(position=[0.,0.,0.], symbols=['Ni', 'Fe'], weights=[0.5,0.5], name='NiFe1')

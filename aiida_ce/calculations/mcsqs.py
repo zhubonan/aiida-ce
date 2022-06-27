@@ -34,7 +34,7 @@ class AtatMcsqsCalculation(CalcJob):
         spec.output('bestsqs', valid_type=orm.StructureData, help='sqs structure file')
         spec.output('bestcorr', valid_type=orm.Float, help='bestcorr of sqs')
 
-        spec.input('metadata.options.parser_name', valid_type=str, default='atat.mcsqs')
+        spec.input('metadata.options.parser_name', valid_type=str, default='ce.atat.mcsqs')
         spec.input('metadata.options.resources', valid_type=dict, default={'num_machines': 1})
         spec.input('metadata.options.max_wallclock_seconds', valid_type=int, default=1800, required=True)
         spec.input('metadata.options.input_rndstr_filename', valid_type=str, default='rndstr.in')

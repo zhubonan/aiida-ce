@@ -101,10 +101,10 @@ def generate_inputs(fixture_code):
         supercell = orm.StructureData(
             cell=[[2., 0., 0.], [1., 1.7321, 0.], [0., 0., 3.26666]])
 
-        if entry_point_name == 'atat.mcsqs':
+        if entry_point_name == 'ce.atat.mcsqs':
             inputs = {
-                'code': fixture_code('atat.mcsqs'),
-                'code_corrdump': fixture_code('atat.corrdump', entry_point_name='atat.mcsqs'),
+                'code': fixture_code('ce.atat.mcsqs'),
+                'code_corrdump': fixture_code('atat.corrdump', entry_point_name='ce.atat.mcsqs'),
                 'primitive_structure': primitive_structure,
                 'supercell': supercell,
                 'cutoffs': orm.List(list=[1.1]),
@@ -123,7 +123,7 @@ def generate_inputs(fixture_code):
 def test_atat_mcsqs_default(fixture_sandbox, generate_calc_job,
                             generate_inputs, file_regression):
     """Test mcsqs"""
-    entry_point_name = 'atat.mcsqs'
+    entry_point_name = 'ce.atat.mcsqs'
     inputs = generate_inputs(entry_point_name)
 
     calc_info = generate_calc_job(fixture_sandbox, entry_point_name, inputs)

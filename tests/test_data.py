@@ -11,9 +11,9 @@ from aiida import orm
 from aiida_ce.workflows.create_ce import StructureDbData
 from . import TEST_DIR
 
-ClusterSpaceData = DataFactory('cluster_space')
-ClusterExpansionData = DataFactory('cluster_expansion')
-StructureDbData = DataFactory('structure_db')
+ClusterSpaceData = DataFactory('ce.cluster_space')
+ClusterExpansionData = DataFactory('ce.cluster_expansion')
+StructureDbData = DataFactory('ce.structure_db')
 
 
 class TestClusterSpaceData:

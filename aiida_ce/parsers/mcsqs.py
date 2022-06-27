@@ -4,7 +4,7 @@ from aiida.parsers.parser import Parser
 from aiida.plugins import CalculationFactory
 from aiida import orm
 
-AtatMcsqsCalculation = CalculationFactory('atat.mcsqs')
+AtatMcsqsCalculation = CalculationFactory('ce.atat.mcsqs')
 
 
 class AtatMcsqsParser(Parser):

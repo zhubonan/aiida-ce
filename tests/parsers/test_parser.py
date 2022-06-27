@@ -43,8 +43,8 @@ def generate_calc_job_node():
 
 def test_mcsqs_default(fixture_localhost, generate_calc_job_node):
     """Test mcsqs output parser"""
-    entry_point_calc_job = 'atat.mcsqs'
-    entry_point_parser = 'atat.mcsqs'
+    entry_point_calc_job = 'ce.atat.mcsqs'
+    entry_point_parser = 'ce.atat.mcsqs'
 
     node = generate_calc_job_node(entry_point_calc_job, fixture_localhost,
                                   'mcsqs_default')
